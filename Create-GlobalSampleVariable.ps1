@@ -13,7 +13,7 @@
         Copyright        : (c) 2020 - Paschal Bekke
         Purpose / Change : Create Array/Hash Tables used as Sample Parameters for use with New-CommentBasedHelp
         Prerequisite     : No Prerequisite
-        Version          : 0.1
+        Version          : 0.2
 
 
 #>
@@ -65,9 +65,9 @@ $VersionHash.Add("ScriptVersion","0.3")
 
 # Use as Hash (@CmdletHash)
 
-$Global:SynopsisHash = [System.Collections.Specialized.OrderedDictionary]@{}
-$SynopsisHash.Add('Synopsis','Creation of Comment-Based Help')
-$SynopsisHash.add('Description','Generates a Comment-Based Help header for a function or script')
+$Global:CmdletHash = [System.Collections.Specialized.OrderedDictionary]@{}
+$CmdletHash.Add('Synopsis','Creation of Comment-Based Help')
+$CmdletHash.add('Description','Generates a Comment-Based Help header for a function or script')
 
 $Infotext = @"
 
@@ -75,12 +75,12 @@ Created the following Sample Variables for use with New-CommentBasedHelp
 
 ParameterArray - use as Array for the -Parameter parameter (`$ParameterArray)
 VersionHash    - use as Hash Table Splatting (`@VersionHash)
-SynopsisHash   - use as Hash Table Splatting (`@SynopsisHash)
+CmdletHash     - use as Hash Table Splatting (`@CmdletHash)
 ExampleArray   - use as Array for the -Example parameter (`$ExampleArray)
 
 Use the following syntax for use with New-CommentBasedHelp cmdlet
 
-New-CommentBasedHelp `@SynopsisHash -Parameter `$ParameterArray `@VersionHash -Example `$ExampleArray -WordWrap
+New-CommentBasedHelp `@CmdletHash -Parameter `$ParameterArray `@VersionHash -Example `$ExampleArray -WordWrap
 
 "@
 
