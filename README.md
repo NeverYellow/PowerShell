@@ -13,7 +13,7 @@ Currently it includes all defined keywords. For more information:
 # Sample Usage 
 New-CommentBasedHelp -Synopsis 'Creation of Comment-Based Help'  -Description 'Generates a Comment-Based Help header for a function or script' 
 
-#### Output:
+#### Sample Output:
 ```
 <#
 
